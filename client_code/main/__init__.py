@@ -3,6 +3,7 @@ from anvil import *
 from .. import api
 from ..data import data
 from ..settings import settings
+from ..qa import qa
 
 class main(mainTemplate):
   def __init__(self, **properties):
@@ -13,7 +14,8 @@ class main(mainTemplate):
     
     self.page2form = {
       "data": data,
-      "settings": settings()
+      "settings": settings,
+      "qa": qa
     }
 
   def menu_click(self, **kw):
@@ -26,5 +28,4 @@ class main(mainTemplate):
     page = kw['sender'].tag
     form = self.page2form[page]
     self.content_panel.add_component(form())
-    
     

@@ -12,12 +12,14 @@ class data(dataTemplate):
     if status == 200:
       self.data_panel.items = body['results']
 
-  def upload_data_change(self, file, **event_args):
+  def upload_data_change(self, files, **event_args):
     self.upload_data.clear()
     embed = confirm("Run embedding on the documents?")
-    status, body = api.upload(f"data/upload?embed={embed}", file.get_bytes(), file.name, file.content_type)
-    if status == 200:
+    with Notification(f"Uploading {len(files)} files"):
       items = self.data_panel.items
-      items.insert(0, body['results'][0])
-      self.data_panel.items = items
+      for file in files:
+        status, body = api.upload(f"data/upload?embed={embed}", file.get_bytes(), file.name, file.content_type)
+        if status == 200:
+          items.insert(0, body['results'][0])
+    self.data_panel.items = items
 
