@@ -23,7 +23,7 @@ metadata: {title: Tchat, description: Tchat, logo_img: 'asset:dl-telekom-logo-01
 startup: {type: form, module: main}
 secrets:
   api_url:
-    value: {G4DFCC3BKZOCYBZF: 4rQ50XYdjlhCi5L4hWoFuB+S1sFQ+iCacUrmKrmvwv4hzCEz81ZgxNZ1V/aPSS6+iQivk+W6+w6jiqmtn4xvR5MSpFkSQWAaRxVKOycgTOVhW5ynOJsaWAo33qAALNv5VEEoh2XZXNT3xV8O7wnWgUYIbnqZzbb+QQ==}
+    value: {G4DFCC3BKZOCYBZF: EM9RztpBXuIBhXbJxXbgyrAJONaLYuS29umu8SkNJ8wrhNvgD8LKkboc1gNcqF1C35arAROgGB1OC9QqR0gmhxJVQdQ64n/Px/iOTLphH1C7PuNQCqZBfDtg6q5uxtEJR8Ay85wJZw9iaXzW2AC6DkSmtIbsH9TB9z48qekE}
     type: secret
 native_deps:
   head_html: "<script>    \n  function request(method, url, headers, data) {\n    if (data) {\n      const response = fetch(url, {\n          method: method,\n          body: JSON.stringify(data),\n          headers: headers,\n          // mode: 'no-cors'\n        });\n      return response\n    } else {\n      const response = fetch(url, {\n          method: method,\n          headers: headers,\n          // mode: 'no-cors'\n        });\n      return response\n    }\n  }\n  \n  function upload(url, headers, file, file_name, file_content_type) {\n    const blob = new Blob([file], {\n      type: file_content_type,\n    });\n    \n    const formData = new FormData();\n    formData.append(\"file\", blob, file_name);\n    console.log(formData)\n    \n    const response =  fetch(url, {\n      method: \"POST\",\n      headers: headers,\n      body: formData,\n    })\n    return response\n  }\n</script>"
