@@ -18,6 +18,7 @@ class main(mainTemplate):
       self.navbar_links.remove_from_parent()
       self.content_panel.add_component(comp())
       return
+      
     
     self.page2form = {
       "data": data,
