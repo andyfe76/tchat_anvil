@@ -1,9 +1,10 @@
 unique_ids:
   forms:
-    Form1: TPK5W2742JACJVOJ3WYNYCOOGSUNO5BS
+    main: TPK5W2742JACJVOJ3WYNYCOOGSUNO5BS
   modules: {}
   server_modules: {}
   assets:
-    theme.css: 6ZOCPJASIBZCXTHWSCNMHSGLWWCJRCYY
+    dl-telekom-logo-01.jpg: '1721289624040309043848982.9239'
     standard-page.html: RYHH6BZ5OO56GRZH36KINMRE77IN7P55
+    theme.css: 6ZOCPJASIBZCXTHWSCNMHSGLWWCJRCYY
   scripts: {}
