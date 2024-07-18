@@ -10,6 +10,9 @@ from anvil.js import window
 class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+    url = self.call_js("get_url")
+    print('url', url, dict(url))
+    
     api.main_form = self
     
     api.get_api_url()
@@ -36,6 +39,7 @@ class main(mainTemplate):
     self.content_panel.add_component(self.page2instance[page])
 
   def form_show(self, **event_args):
-    url = self.call_js("get_url")
-    print('url', url, dict(url))
+    pass
+    # url = self.call_js("get_url")
+    # print('url', url, dict(url))
     
