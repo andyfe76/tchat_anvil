@@ -14,6 +14,7 @@ class main(mainTemplate):
     
     api.get_api_url()
     if "#comp" in window.location.href:
+      alert('go')
       open_form('comp')
       return
     
