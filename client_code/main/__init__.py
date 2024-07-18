@@ -17,6 +17,7 @@ class main(mainTemplate):
       "settings": settings,
       "qa": qa
     }
+    self.page2instance = {}
 
   def menu_click(self, **kw):
     self.content_panel.clear()
@@ -26,6 +27,9 @@ class main(mainTemplate):
     sender = kw['sender']
     sender.bold = True
     page = kw['sender'].tag
-    form = self.page2form[page]
-    self.content_panel.add_component(form())
+    if page not in self.page2instance:
+      form = self.page2form[page]
+      self.page2instance[page] = form()
+
+    self.content_panel.add_component(self.page2instance[page])
     

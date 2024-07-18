@@ -8,7 +8,7 @@ components:
 - name: data_grid
   properties:
     columns:
-    - {id: JKSDUP, title: Query, data_key: query}
+    - {id: JKSDUP, title: Query, data_key: question}
     - {id: VJQQOR, title: Answer, data_key: response}
     - {id: OJLQEN, title: Sources, data_key: ''}
   type: DataGrid

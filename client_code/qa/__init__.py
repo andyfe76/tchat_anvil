@@ -11,12 +11,11 @@ class qa(qaTemplate):
   def refresh(self, **kw):
     status, body = api.get("qa")
     if status == 200:
-      pass
       self.data_panel.items = body['results']
-
+        
   def ask_click(self, **event_args):
-    response = alert(query(), large=True, buttons=[])
+    response = alert(query(), large=True, buttons=[], dismissible=False)
     if response:
       items = self.data_panel.items
-      items.insert(0, response)
+      items = items.insert(0, response)
       self.data_panel.items = items
