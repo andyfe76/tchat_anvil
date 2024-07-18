@@ -12,8 +12,9 @@ class main(mainTemplate):
     self.init_components(**properties)
     api.main_form = self
     queryString = window.location.search
-    for attr in dir(queryString):
-      print(attr, getattr(queryString, attr))
+    print(queryString)
+    #for attr in dir(queryString):
+    #  print(attr, getattr(queryString, attr))
     #.search
    # urlParams = URLSearchParams(queryString)
     #print('!!', dir(queryString), queryString)
