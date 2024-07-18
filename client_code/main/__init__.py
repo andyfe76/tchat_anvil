@@ -4,11 +4,15 @@ from .. import api
 from ..data import data
 from ..settings import settings
 from ..qa import qa
+from anvil.js import window
+
 
 class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     api.main_form = self
+    queryString = window.location.search
+    alert(queryString)
     
     api.get_api_url()
     
