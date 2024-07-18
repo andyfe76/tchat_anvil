@@ -11,13 +11,6 @@ class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     api.main_form = self
-    queryString = window.location.search
-    print(queryString)
-    #for attr in dir(queryString):
-    #  print(attr, getattr(queryString, attr))
-    #.search
-   # urlParams = URLSearchParams(queryString)
-    #print('!!', dir(queryString), queryString)
     
     api.get_api_url()
     
@@ -41,4 +34,8 @@ class main(mainTemplate):
       self.page2instance[page] = form()
 
     self.content_panel.add_component(self.page2instance[page])
+
+  def form_show(self, **event_args):
+    url = self.call_js("get_url")
+    print('url', url)
     
