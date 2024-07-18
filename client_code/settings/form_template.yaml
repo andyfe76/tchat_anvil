@@ -64,6 +64,16 @@ components:
   layout_properties: {grid_position: 'WLWQYY,GNTBAZ'}
   data_bindings:
   - {property: text, code: 'self.item[''llm_temperature'']', writeback: true}
+- name: label_7
+  properties: {text: LLM Prompt}
+  type: Label
+  layout_properties: {grid_position: 'NJAEKF,WIKFTY'}
+- name: text_area_1
+  properties: {height: 166.84375}
+  type: TextArea
+  layout_properties: {grid_position: 'MJXZQX,TDOKFR'}
+  data_bindings:
+  - {property: text, code: 'self.item[''llm_prompt'']', writeback: true}
 - name: save
   properties: {text: Save, role: filled-button}
   type: Button
