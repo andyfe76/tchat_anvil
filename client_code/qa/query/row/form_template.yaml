@@ -1,0 +1,12 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: show_link
+  properties: {text: Show, align: center}
+  type: Link
+  layout_properties: {column: VJQQOR}
+  event_bindings: {click: show_link_click}
+- name: text
+  properties: {visible: false}
+  type: Label
+  layout_properties: {column: VJQQOR}

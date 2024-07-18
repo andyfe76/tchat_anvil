@@ -1,0 +1,72 @@
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {text: Embeddings Model}
+  type: Label
+  layout_properties: {grid_position: 'PWDRPW,UCEFAW'}
+- name: drop_down_1
+  properties:
+    items: [text-embedding-ada-002, text-embedding-3-large, text-embedding-3-small]
+    role: outlined
+  type: DropDown
+  layout_properties: {grid_position: 'PWDRPW,ILMRJR'}
+  data_bindings:
+  - {property: selected_value, code: 'self.item[''embeddings_model'']', writeback: true}
+- name: label_2
+  properties: {text: Embeddings n-result}
+  type: Label
+  layout_properties: {grid_position: 'HDCIHZ,UNGJJL'}
+- name: text_box_1
+  properties: {type: number, role: outlined}
+  type: TextBox
+  layout_properties: {grid_position: 'HDCIHZ,BDHIRN'}
+  data_bindings:
+  - {property: text, code: 'self.item[''embeddings_n_result'']', writeback: true}
+- name: label_3
+  properties: {text: Embeddings max distance}
+  type: Label
+  layout_properties: {grid_position: 'KNFLOJ,HRJAVG'}
+- name: text_box_2
+  properties: {type: number, role: outlined}
+  type: TextBox
+  layout_properties: {grid_position: 'KNFLOJ,UBFNYF'}
+  data_bindings:
+  - {property: text, code: 'self.item[''embeddings_max_distance'']', writeback: true}
+- name: label_4
+  properties: {text: LLM Model}
+  type: Label
+  layout_properties: {grid_position: 'HXFDZX,VROLSN'}
+- name: drop_down_2
+  properties:
+    items: [gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo]
+    role: outlined
+  type: DropDown
+  layout_properties: {grid_position: 'HXFDZX,EJYZWS'}
+  data_bindings:
+  - {property: selected_value, code: 'self.item[''llm_model'']', writeback: true}
+- name: label_5
+  properties: {text: LLM max tokens}
+  type: Label
+  layout_properties: {grid_position: 'IKGPCR,GXRLVC'}
+- name: text_box_3
+  properties: {role: outlined, type: number}
+  type: TextBox
+  layout_properties: {grid_position: 'IKGPCR,NBNUNZ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''llm_max_tokens'']', writeback: true}
+- name: label_6
+  properties: {text: LLM Temperature}
+  type: Label
+  layout_properties: {grid_position: 'WLWQYY,LYGNZU'}
+- name: text_box_4
+  properties: {role: outlined, type: number}
+  type: TextBox
+  layout_properties: {grid_position: 'WLWQYY,GNTBAZ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''llm_temperature'']', writeback: true}
+- name: save
+  properties: {text: Save, role: filled-button}
+  type: Button
+  layout_properties: {grid_position: 'ZPPQHK,NCEWTK'}
+  event_bindings: {click: save_click}
+is_package: true
