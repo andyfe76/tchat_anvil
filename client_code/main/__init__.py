@@ -12,8 +12,8 @@ class main(mainTemplate):
     self.init_components(**properties)
     api.main_form = self
     queryString = window.location.search
-    urlParams = new URLSearchParams(queryString)
-    print(urlParams)
+   # urlParams = URLSearchParams(queryString)
+    print(queryString)
     
     api.get_api_url()
     
