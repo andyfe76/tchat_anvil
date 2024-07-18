@@ -12,3 +12,22 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: menu_data
+    properties: {text: Data}
+    type: Link
+    layout_properties: {}
+    data_bindings:
+    - {property: tag, code: '''data''', writeback: false}
+    event_bindings: {click: menu_click}
+  - name: menu_settings
+    properties: {text: Settings}
+    type: Link
+    layout_properties: {}
+    data_bindings:
+    - {property: tag, code: '''settings''', writeback: false}
+    event_bindings: {click: menu_click}
+- name: label_1
+  properties: {text: TChat}
+  type: Label
+  layout_properties: {slot: title}

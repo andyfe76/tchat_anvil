@@ -1,0 +1,33 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: added_at
+  properties: {}
+  type: Label
+  layout_properties: {column: JKSDUP}
+- name: text
+  properties: {enabled: false}
+  type: TextArea
+  layout_properties: {column: VJQQOR}
+- name: flow
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {column: OJLQEN}
+  components:
+  - name: edit
+    properties: {icon: 'fa:pencil'}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: edit_click}
+  - name: delete
+    properties: {icon: 'fa:minus-circle', foreground: 'theme:Error'}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: delete_click}
+- name: embed_run
+  properties: {icon: ''}
+  type: Link
+  layout_properties: {column: ZEDFNV}
+  data_bindings:
+  - {property: text, code: '"Yes" if self.item["embeddings_done"] else "No, click to run"', writeback: false}
+  event_bindings: {click: embed_run_click}

@@ -1,0 +1,21 @@
+container: {type: ColumnPanel}
+components:
+- name: upload_data
+  properties: {role: filled-button, file_types: 'txt,zip', align: right, multiple: false}
+  type: FileLoader
+  layout_properties: {grid_position: 'ZSMTAT,IITOWA', full_width_row: true}
+  event_bindings: {change: upload_data_change}
+- name: data_grid
+  properties:
+    columns:
+    - {id: JKSDUP, title: Added at, data_key: '', width: 155.75390625, expand: false}
+    - {id: VJQQOR, title: Text, data_key: ''}
+    - {id: ZEDFNV, data_key: '', title: Embedding, width: 126.69921875, expand: false}
+    - {id: OJLQEN, title: '', data_key: '', width: 76.6171875, expand: false}
+  type: DataGrid
+  components:
+  - name: data_panel
+    properties: {item_template: data.row}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'NMYLIJ,JGTDVW', full_width_row: true}
+is_package: true
