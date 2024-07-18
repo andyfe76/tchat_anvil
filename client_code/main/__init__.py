@@ -10,8 +10,8 @@ from anvil.js import window
 class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    url = self.call_js("get_url")
-    print('url', url, dict(url))
+
+    print('!!!!!', window.location.href)
     
     api.main_form = self
     
