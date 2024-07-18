@@ -1,0 +1,10 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: link_1
+  properties: {}
+  type: Link
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''summary'']', writeback: false}
+  event_bindings: {click: link_1_click}

@@ -1,10 +1,22 @@
 from ._anvil_designer import qaTemplate
 from anvil import *
-
+from .. import api
+from .query import query
 
 class qa(qaTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.refresh()
 
-    # Any code you write here will run before the form opens.
+  def refresh(self, **kw):
+    status, body = api.get("qa")
+    if status == 200:
+      pass
+      self.data_panel.items = body['results']
+
+  def ask_click(self, **event_args):
+    response = alert(query(), large=True, buttons=[])
+    if response:
+      items = self.data_panel.items
+      items.insert(0, response)
+      self.data_panel.items = items
