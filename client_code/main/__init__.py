@@ -10,12 +10,12 @@ from anvil.js import window
 class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-
-    print('!!!!!', window.location.href)
-    
     api.main_form = self
     
     api.get_api_url()
+    if "#comp" in window.location.href:
+      open_form('comp')
+      return
     
     self.page2form = {
       "data": data,
