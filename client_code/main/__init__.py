@@ -11,7 +11,7 @@ class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     api.main_form = self
-    queryString = window.location
+    queryString = window.location.search
     for attr in dir(queryString):
       print(attr, getattr(queryString, attr))
     #.search
