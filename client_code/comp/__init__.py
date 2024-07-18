@@ -5,7 +5,6 @@ from .. import api
 class comp(compTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    api.get_api_url()
 
   def ask_click(self, **event_args):
     status, body = api.post(f"qa?query={self.question.text}")

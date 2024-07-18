@@ -5,7 +5,7 @@ from ..data import data
 from ..settings import settings
 from ..qa import qa
 from anvil.js import window
-
+from ..comp import comp
 
 class main(mainTemplate):
   def __init__(self, **properties):
@@ -14,8 +14,9 @@ class main(mainTemplate):
     
     api.get_api_url()
     if "#comp" in window.location.href:
-      alert('go')
-      open_form('comp')
+      self.logo.remove_from_parent()
+      self.navbar_links.remove_from_parent()
+      self.content_panel.add_component(comp())
       return
     
     self.page2form = {

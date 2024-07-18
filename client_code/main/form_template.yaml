@@ -35,7 +35,7 @@ components:
     data_bindings:
     - {property: tag, code: '''settings''', writeback: false}
     event_bindings: {click: menu_click}
-- name: label_1
+- name: logo
   properties: {text: TChat}
   type: Label
   layout_properties: {slot: title}
