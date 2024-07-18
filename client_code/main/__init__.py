@@ -11,7 +11,7 @@ class main(mainTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     api.main_form = self
-    queryString = window.location.search
+    queryString = window.location#.search
    # urlParams = URLSearchParams(queryString)
     print('!!', queryString)
     
