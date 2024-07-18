@@ -1,4 +1,4 @@
-allow_embedding: false
+allow_embedding: true
 package_name: Tchat
 name: Tchat
 startup_form: null
