@@ -41,8 +41,4 @@ class main(mainTemplate):
 
     self.content_panel.add_component(self.page2instance[page])
 
-  def form_show(self, **event_args):
-    pass
-    # url = self.call_js("get_url")
-    # print('url', url, dict(url))
     
