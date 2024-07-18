@@ -13,7 +13,7 @@ class main(mainTemplate):
     api.main_form = self
     queryString = window.location.search
    # urlParams = URLSearchParams(queryString)
-    print(queryString)
+    print('!!', queryString)
     
     api.get_api_url()
     
