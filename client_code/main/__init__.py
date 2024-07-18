@@ -36,6 +36,10 @@ class main(mainTemplate):
     self.content_panel.add_component(self.page2instance[page])
 
   def form_show(self, **event_args):
-    url = self.call_js("get_url")
-    print('url', url)
+    queryString = window.location.search
+    queryParams = queryString.substring(1)
+    paramsArray = queryParams.split('&');
+    print(paramsArray)
+    #url = self.call_js("get_url")
+    #print('url', url)
     
