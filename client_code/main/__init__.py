@@ -37,5 +37,5 @@ class main(mainTemplate):
 
   def form_show(self, **event_args):
     url = self.call_js("get_url")
-    print('url', url)
+    print('url', url, dict(url))
     
