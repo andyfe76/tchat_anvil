@@ -6,7 +6,7 @@ components:
   type: Label
   layout_properties: {column: JKSDUP}
 - name: text
-  properties: {enabled: false}
+  properties: {enabled: false, height: '100'}
   type: TextArea
   layout_properties: {column: VJQQOR}
 - name: flow
@@ -25,9 +25,9 @@ components:
     layout_properties: {}
     event_bindings: {click: delete_click}
 - name: embed_run
-  properties: {icon: ''}
+  properties: {icon: '', align: center}
   type: Link
   layout_properties: {column: ZEDFNV}
   data_bindings:
-  - {property: text, code: '"Yes" if self.item["embeddings_done"] else "No, click to run"', writeback: false}
+  - {property: text, code: '"Yes, click to re-run" if self.item["embeddings_done"] else "No, click to run"', writeback: false}
   event_bindings: {click: embed_run_click}
