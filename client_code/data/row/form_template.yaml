@@ -6,7 +6,7 @@ components:
   type: Label
   layout_properties: {column: JKSDUP}
 - name: text
-  properties: {enabled: false, height: '100'}
+  properties: {enabled: false, height: '100', role: outlined}
   type: TextArea
   layout_properties: {column: VJQQOR}
 - name: flow

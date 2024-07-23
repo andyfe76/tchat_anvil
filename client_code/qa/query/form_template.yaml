@@ -1,11 +1,11 @@
 container: {type: ColumnPanel}
 components:
 - name: label_1
-  properties: {text: Question}
+  properties: {text: Question, bold: true}
   type: Label
   layout_properties: {grid_position: 'BMTGOC,NRCPEF'}
 - name: question
-  properties: {}
+  properties: {height: 92.06640625, role: outlined}
   type: TextArea
   layout_properties: {grid_position: 'SBKUCJ,NGKYTU'}
 - name: ask
@@ -18,19 +18,24 @@ components:
   type: Button
   layout_properties: {grid_position: 'SGSGIF,UHAVTQ'}
   event_bindings: {click: close_click}
-- name: label_2
-  properties: {text: Answer}
+- name: answer_lbl
+  properties: {text: Answer, bold: true, visible: false}
   type: Label
   layout_properties: {grid_position: 'AOVQWN,GEQWWJ'}
 - name: answer
   properties: {}
   type: Label
   layout_properties: {grid_position: 'UDBMDT,GCXQKC'}
+- name: sources_lbl
+  properties: {text: Sources, bold: true, visible: false}
+  type: Label
+  layout_properties: {grid_position: 'QNAJZM,IFBXZI'}
 - name: sources_grid
   properties:
     columns:
     - {id: JKSDUP, title: Summary, data_key: summary}
     - {id: VJQQOR, title: Full text, data_key: ''}
+    visible: false
   type: DataGrid
   components:
   - name: sources_panel

@@ -14,8 +14,5 @@ class qa(qaTemplate):
       self.data_panel.items = body['results']
         
   def ask_click(self, **event_args):
-    response = alert(query(), large=True, buttons=[], dismissible=False)
-    if response:
-      items = self.data_panel.items
-      items = items.insert(0, response)
-      self.data_panel.items = items
+    alert(query(), large=True, buttons=[], dismissible=False)
+    self.refresh()

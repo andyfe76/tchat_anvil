@@ -10,8 +10,9 @@ components:
   type: DataGrid
   components:
   - name: panel
-    properties: {item_template: qa.row.row}
+    properties: {item_template: qa.row.row, role: null}
     type: RepeatingPanel
     data_bindings:
     - {property: items, code: 'self.item[''sources'']', writeback: false}
+    layout_properties: {}
   layout_properties: {column: OJLQEN}

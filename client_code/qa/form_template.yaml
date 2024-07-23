@@ -8,13 +8,14 @@ components:
 - name: data_grid
   properties:
     columns:
-    - {id: JKSDUP, title: Query, data_key: question, width: '500'}
+    - {id: JKSDUP, title: Query, data_key: question, width: '350'}
     - {id: VJQQOR, title: Answer, data_key: response}
-    - {id: OJLQEN, title: Sources, data_key: '', width: '400'}
+    - {id: OJLQEN, title: Sources, data_key: '', width: '300'}
   type: DataGrid
   components:
   - name: data_panel
-    properties: {item_template: qa.row}
+    properties: {item_template: qa.row, role: striped}
     type: RepeatingPanel
+    layout_properties: {}
   layout_properties: {grid_position: 'ZXYBPT,DQTEBM', full_width_row: true}
 is_package: true
