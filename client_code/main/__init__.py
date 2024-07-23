@@ -29,8 +29,8 @@ class main(mainTemplate):
 
   def menu_click(self, **kw):
     self.content_panel.clear()
-    for comp in self.navbar_links.get_components():
-      comp.bold = False
+    for navbar_comp in self.navbar_links.get_components():
+      navbar_comp.bold = False
 
     sender = kw['sender']
     sender.bold = True
@@ -39,6 +39,6 @@ class main(mainTemplate):
       form = self.page2form[page]
       self.page2instance[page] = form()
 
-    self.content_panel.add_component(self.page2instance[page])
+    self.content_panel.add_component(self.page2instance[page], full_width_row=True)
 
     
