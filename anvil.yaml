@@ -8,10 +8,7 @@ runtime_options:
   client_version: '3'
   server_version: python3-sandbox
   server_spec: {base: python310-standard}
-dependencies:
-- dep_id: dep_gpwptqlvz6aj3a
-  version: {dev: false}
-  resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
